@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>brushing – Visualization gallery</title>
+<title>Brushing and linking – Visualization gallery</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,6 +103,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script type="ojs-define">
+{"contents":[{"name":"cars_long","value":{"manufacturer":["audi","audi","audi","audi","audi","audi","audi","audi","audi","audi","audi","audi","audi","audi","audi","audi","audi","audi","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","chevrolet","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","dodge","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","ford","honda","honda","honda","honda","honda","honda","honda","honda","honda","hyundai","hyundai","hyundai","hyundai","hyundai","hyundai","hyundai","hyundai","hyundai","hyundai","hyundai","hyundai","hyundai","hyundai","jeep","jeep","jeep","jeep","jeep","jeep","jeep","jeep","land rover","land rover","land rover","land rover","lincoln","lincoln","lincoln","mercury","mercury","mercury","mercury","nissan","nissan","nissan","nissan","nissan","nissan","nissan","nissan","nissan","nissan","nissan","nissan","nissan","pontiac","pontiac","pontiac","pontiac","pontiac","subaru","subaru","subaru","subaru","subaru","subaru","subaru","subaru","subaru","subaru","subaru","subaru","subaru","subaru","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","toyota","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen","volkswagen"],"model":["a4","a4","a4","a4","a4","a4","a4","a4 quattro","a4 quattro","a4 quattro","a4 quattro","a4 quattro","a4 quattro","a4 quattro","a4 quattro","a6 quattro","a6 quattro","a6 quattro","c1500 suburban 2wd","c1500 suburban 2wd","c1500 suburban 2wd","c1500 suburban 2wd","c1500 suburban 2wd","corvette","corvette","corvette","corvette","corvette","k1500 tahoe 4wd","k1500 tahoe 4wd","k1500 tahoe 4wd","k1500 tahoe 4wd","malibu","malibu","malibu","malibu","malibu","caravan 2wd","caravan 2wd","caravan 2wd","caravan 2wd","caravan 2wd","caravan 2wd","caravan 2wd","caravan 2wd","caravan 2wd","caravan 2wd","caravan 2wd","dakota pickup 4wd","dakota pickup 4wd","dakota pickup 4wd","dakota pickup 4wd","dakota pickup 4wd","dakota pickup 4wd","dakota pickup 4wd","dakota pickup 4wd","dakota pickup 4wd","durango 4wd","durango 4wd","durango 4wd","durango 4wd","durango 4wd","durango 4wd","durango 4wd","ram 1500 pickup 4wd","ram 1500 pickup 4wd","ram 1500 pickup 4wd","ram 1500 pickup 4wd","ram 1500 pickup 4wd","ram 1500 pickup 4wd","ram 1500 pickup 4wd","ram 1500 pickup 4wd","ram 1500 pickup 4wd","ram 1500 pickup 4wd","expedition 2wd","expedition 2wd","expedition 2wd","explorer 4wd","explorer 4wd","explorer 4wd","explorer 4wd","explorer 4wd","explorer 4wd","f150 pickup 4wd","f150 pickup 4wd","f150 pickup 4wd","f150 pickup 4wd","f150 pickup 4wd","f150 pickup 4wd","f150 pickup 4wd","mustang","mustang","mustang","mustang","mustang","mustang","mustang","mustang","mustang","civic","civic","civic","civic","civic","civic","civic","civic","civic","sonata","sonata","sonata","sonata","sonata","sonata","sonata","tiburon","tiburon","tiburon","tiburon","tiburon","tiburon","tiburon","grand cherokee 4wd","grand cherokee 4wd","grand cherokee 4wd","grand cherokee 4wd","grand cherokee 4wd","grand cherokee 4wd","grand cherokee 4wd","grand cherokee 4wd","range rover","range rover","range rover","range rover","navigator 2wd","navigator 2wd","navigator 2wd","mountaineer 4wd","mountaineer 4wd","mountaineer 4wd","mountaineer 4wd","altima","altima","altima","altima","altima","altima","maxima","maxima","maxima","pathfinder 4wd","pathfinder 4wd","pathfinder 4wd","pathfinder 4wd","grand prix","grand prix","grand prix","grand prix","grand prix","forester awd","forester awd","forester awd","forester awd","forester awd","forester awd","impreza awd","impreza awd","impreza awd","impreza awd","impreza awd","impreza awd","impreza awd","impreza awd","4runner 4wd","4runner 4wd","4runner 4wd","4runner 4wd","4runner 4wd","4runner 4wd","camry","camry","camry","camry","camry","camry","camry","camry solara","camry solara","camry solara","camry solara","camry solara","camry solara","camry solara","corolla","corolla","corolla","corolla","corolla","land cruiser wagon 4wd","land cruiser wagon 4wd","toyota tacoma 4wd","toyota tacoma 4wd","toyota tacoma 4wd","toyota tacoma 4wd","toyota tacoma 4wd","toyota tacoma 4wd","toyota tacoma 4wd","gti","gti","gti","gti","gti","jetta","jetta","jetta","jetta","jetta","jetta","jetta","jetta","jetta","new beetle","new beetle","new beetle","new beetle","new beetle","new beetle","passat","passat","passat","passat","passat","passat","passat"],"displ":[1.8,1.8,2,2,2.8,2.8,3.1,1.8,1.8,2,2,2.8,2.8,3.1,3.1,2.8,3.1,4.2,5.3,5.3,5.3,5.7,6,5.7,5.7,6.2,6.2,7,5.3,5.3,5.7,6.5,2.4,2.4,3.1,3.5,3.6,2.4,3,3.3,3.3,3.3,3.3,3.3,3.8,3.8,3.8,4,3.7,3.7,3.9,3.9,4.7,4.7,4.7,5.2,5.2,3.9,4.7,4.7,4.7,5.2,5.7,5.9,4.7,4.7,4.7,4.7,4.7,4.7,5.2,5.2,5.7,5.9,4.6,5.4,5.4,4,4,4,4,4.6,5,4.2,4.2,4.6,4.6,4.6,5.4,5.4,3.8,3.8,4,4,4.6,4.6,4.6,4.6,5.4,1.6,1.6,1.6,1.6,1.6,1.8,1.8,1.8,2,2.4,2.4,2.4,2.4,2.5,2.5,3.3,2,2,2,2,2.7,2.7,2.7,3,3.7,4,4.7,4.7,4.7,5.7,6.1,4,4.2,4.4,4.6,5.4,5.4,5.4,4,4,4.6,5,2.4,2.4,2.5,2.5,3.5,3.5,3,3,3.5,3.3,3.3,4,5.6,3.1,3.8,3.8,3.8,5.3,2.5,2.5,2.5,2.5,2.5,2.5,2.2,2.2,2.5,2.5,2.5,2.5,2.5,2.5,2.7,2.7,3.4,3.4,4,4.7,2.2,2.2,2.4,2.4,3,3,3.5,2.2,2.2,2.4,2.4,3,3,3.3,1.8,1.8,1.8,1.8,1.8,4.7,5.7,2.7,2.7,2.7,3.4,3.4,4,4,2,2,2,2,2.8,1.9,2,2,2,2,2.5,2.5,2.8,2.8,1.9,1.9,2,2,2.5,2.5,1.8,1.8,2,2,2.8,2.8,3.6],"year":[1999,1999,2008,2008,1999,1999,2008,1999,1999,2008,2008,1999,1999,2008,2008,1999,2008,2008,2008,2008,2008,1999,2008,1999,1999,2008,2008,2008,2008,2008,1999,1999,1999,2008,1999,2008,2008,1999,1999,1999,1999,2008,2008,2008,1999,1999,2008,2008,2008,2008,1999,1999,2008,2008,2008,1999,1999,1999,2008,2008,2008,1999,2008,1999,2008,2008,2008,2008,2008,2008,1999,1999,2008,1999,1999,1999,2008,1999,1999,1999,2008,2008,1999,1999,1999,1999,1999,2008,1999,2008,1999,1999,2008,2008,1999,1999,2008,2008,2008,1999,1999,1999,1999,1999,2008,2008,2008,2008,1999,1999,2008,2008,1999,1999,2008,1999,1999,2008,2008,2008,2008,2008,2008,2008,1999,1999,2008,2008,2008,2008,1999,2008,2008,1999,1999,1999,2008,1999,2008,2008,1999,1999,1999,2008,2008,2008,2008,1999,1999,2008,1999,1999,2008,2008,1999,1999,1999,2008,2008,1999,1999,2008,2008,2008,2008,1999,1999,1999,1999,2008,2008,2008,2008,1999,1999,1999,1999,2008,2008,1999,1999,2008,2008,1999,1999,2008,1999,1999,2008,2008,1999,1999,2008,1999,1999,1999,2008,2008,1999,2008,1999,1999,2008,1999,1999,2008,2008,1999,1999,2008,2008,1999,1999,1999,1999,2008,2008,2008,2008,1999,1999,1999,1999,1999,1999,2008,2008,1999,1999,2008,2008,1999,1999,2008],"cyl":[4,4,4,4,6,6,6,4,4,4,4,6,6,6,6,6,6,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,4,4,6,6,6,4,6,6,6,6,6,6,6,6,6,6,6,6,6,6,8,8,8,8,8,6,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,6,6,6,6,8,8,6,6,8,8,8,8,8,6,6,6,6,8,8,8,8,8,4,4,4,4,4,4,4,4,4,4,4,4,4,6,6,6,4,4,4,4,6,6,6,6,6,6,8,8,8,8,8,8,8,8,8,8,8,8,6,6,8,8,4,4,4,4,6,6,6,6,6,6,6,6,8,6,6,6,6,8,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,6,6,6,8,4,4,4,4,6,6,6,4,4,4,4,6,6,6,4,4,4,4,4,8,8,4,4,4,6,6,6,6,4,4,4,4,6,4,4,4,4,4,5,5,6,6,4,4,4,4,5,5,4,4,4,4,6,6,6],"trans":["auto(l5)","manual(m5)","manual(m6)","auto(av)","auto(l5)","manual(m5)","auto(av)","manual(m5)","auto(l5)","manual(m6)","auto(s6)","auto(l5)","manual(m5)","auto(s6)","manual(m6)","auto(l5)","auto(s6)","auto(s6)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","manual(m6)","auto(l4)","manual(m6)","auto(s6)","manual(m6)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(s6)","auto(l3)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(l6)","auto(l6)","manual(m6)","auto(l4)","auto(l4)","manual(m5)","auto(l5)","auto(l5)","auto(l5)","manual(m5)","auto(l4)","auto(l4)","auto(l5)","auto(l5)","auto(l5)","auto(l4)","auto(l5)","auto(l4)","manual(m6)","auto(l5)","auto(l5)","auto(l5)","manual(m6)","manual(m6)","auto(l4)","manual(m5)","auto(l5)","auto(l4)","auto(l4)","auto(l4)","auto(l6)","auto(l5)","manual(m5)","auto(l5)","auto(l5)","auto(l6)","auto(l4)","auto(l4)","manual(m5)","manual(m5)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","manual(m5)","auto(l4)","manual(m5)","auto(l5)","auto(l4)","manual(m5)","manual(m5)","auto(l5)","manual(m6)","manual(m5)","auto(l4)","manual(m5)","manual(m5)","auto(l4)","manual(m5)","auto(l5)","auto(l5)","manual(m6)","auto(l4)","manual(m5)","auto(l4)","manual(m5)","auto(l4)","manual(m5)","auto(l5)","auto(l4)","manual(m5)","manual(m5)","auto(l4)","auto(l4)","manual(m6)","manual(m5)","auto(l5)","auto(l5)","auto(l4)","auto(l4)","auto(l5)","auto(l5)","auto(l5)","auto(l5)","auto(l4)","auto(s6)","auto(s6)","auto(l4)","auto(l4)","auto(l4)","auto(l6)","auto(l5)","auto(l5)","auto(l6)","auto(l4)","manual(m5)","auto(l4)","auto(av)","manual(m6)","manual(m6)","auto(av)","auto(l4)","manual(m5)","auto(av)","auto(l4)","manual(m5)","auto(l5)","auto(s5)","auto(l4)","auto(l4)","auto(l4)","auto(l4)","auto(s4)","manual(m5)","auto(l4)","manual(m5)","manual(m5)","auto(l4)","auto(l4)","auto(l4)","manual(m5)","manual(m5)","auto(l4)","auto(s4)","auto(s4)","manual(m5)","manual(m5)","manual(m5)","auto(l4)","auto(l4)","manual(m5)","auto(l5)","auto(l5)","manual(m5)","auto(l4)","manual(m5)","auto(l5)","auto(l4)","manual(m5)","auto(s6)","auto(l4)","manual(m5)","manual(m5)","auto(s5)","auto(l4)","manual(m5)","auto(s5)","auto(l3)","auto(l4)","manual(m5)","manual(m5)","auto(l4)","auto(l4)","auto(s6)","manual(m5)","auto(l4)","manual(m5)","manual(m5)","auto(l4)","manual(m6)","auto(l5)","manual(m5)","auto(l4)","manual(m6)","auto(s6)","manual(m5)","manual(m5)","manual(m5)","auto(l4)","auto(s6)","manual(m6)","auto(s6)","manual(m5)","auto(l4)","manual(m5)","manual(m5)","auto(l4)","manual(m5)","auto(l4)","manual(m5)","auto(s6)","manual(m5)","auto(l5)","auto(s6)","manual(m6)","auto(l5)","manual(m5)","auto(s6)"],"drv":["f","f","f","f","f","f","f","4","4","4","4","4","4","4","4","4","4","4","r","r","r","r","r","r","r","r","r","r","4","4","4","4","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","r","r","r","4","4","4","4","4","4","4","4","4","4","4","4","4","r","r","r","r","r","r","r","r","r","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","4","4","4","4","4","4","4","4","4","4","4","4","r","r","r","4","4","4","4","f","f","f","f","f","f","f","f","f","4","4","4","4","f","f","f","f","f","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","4","4","4","4","4","4","4","4","4","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f","f"],"cty":[18,21,20,21,16,18,18,18,16,20,19,15,17,17,15,15,17,16,14,11,14,13,12,16,15,16,15,15,14,11,11,14,19,22,18,18,17,18,17,16,16,17,17,11,15,15,16,16,15,14,13,14,14,14,9,11,11,13,13,9,13,11,13,11,12,9,13,13,12,9,11,11,13,11,11,11,12,14,15,14,13,13,13,14,14,13,13,13,11,13,18,18,17,16,15,15,15,15,14,28,24,25,23,24,26,25,24,21,18,18,21,21,18,18,19,19,19,20,20,17,16,17,17,15,15,14,9,14,13,11,11,12,12,11,11,11,12,14,13,13,13,21,19,23,23,19,19,18,19,19,14,15,14,12,18,16,17,18,16,18,18,20,19,20,18,21,19,19,19,20,20,19,20,15,16,15,15,16,14,21,21,21,21,18,18,19,21,21,21,22,18,18,18,24,24,26,28,26,11,13,15,16,17,15,15,15,16,21,19,21,22,17,33,21,19,22,21,21,21,16,17,35,29,21,19,20,20,21,18,19,21,16,18,17],"hwy":[29,29,31,30,26,26,27,26,25,28,27,25,25,25,25,24,25,23,20,15,20,17,17,26,23,26,25,24,19,14,15,17,27,30,26,29,26,24,24,22,22,24,24,17,22,21,23,23,19,18,17,17,19,19,12,17,15,17,17,12,17,16,18,15,16,12,17,17,16,12,15,16,17,15,17,17,18,17,19,17,19,19,17,17,17,16,16,17,15,17,26,25,26,24,21,22,23,22,20,33,32,32,29,32,34,36,36,29,26,27,30,31,26,26,28,26,29,28,27,24,24,24,22,19,20,17,12,19,18,14,15,18,18,15,17,16,18,17,19,19,17,29,27,31,32,27,26,26,25,25,17,17,20,18,26,26,27,28,25,25,24,27,25,26,23,26,26,26,26,25,27,25,27,20,20,19,17,20,17,29,27,31,31,26,26,28,27,29,31,31,26,26,27,30,33,35,37,35,15,18,20,20,22,17,19,18,20,29,26,29,29,24,44,29,26,29,29,29,29,23,24,44,41,29,26,28,29,29,29,28,29,26,26,26],"fl":["p","p","p","p","p","p","p","p","p","p","p","p","p","p","p","p","p","p","r","e","r","r","r","p","p","p","p","p","r","e","r","d","r","r","r","r","r","r","r","r","r","r","r","e","r","r","r","r","r","r","r","r","r","r","e","r","r","r","r","e","r","r","r","r","r","e","r","r","r","e","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","p","r","r","r","p","r","r","r","c","p","r","r","r","r","r","r","r","r","r","r","r","r","r","r","d","r","r","r","e","r","r","p","p","r","r","p","r","p","r","r","r","r","r","r","r","r","r","p","p","r","r","p","r","r","p","p","r","p","r","r","p","r","r","r","p","r","p","r","r","r","r","p","r","p","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","p","p","r","d","r","r","p","p","r","r","r","r","d","d","r","r","r","r","p","p","p","p","p","p","p"],"class":["compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","midsize","midsize","midsize","suv","suv","suv","suv","suv","2seater","2seater","2seater","2seater","2seater","suv","suv","suv","suv","midsize","midsize","midsize","midsize","midsize","minivan","minivan","minivan","minivan","minivan","minivan","minivan","minivan","minivan","minivan","minivan","pickup","pickup","pickup","pickup","pickup","pickup","pickup","pickup","pickup","suv","suv","suv","suv","suv","suv","suv","pickup","pickup","pickup","pickup","pickup","pickup","pickup","pickup","pickup","pickup","suv","suv","suv","suv","suv","suv","suv","suv","suv","pickup","pickup","pickup","pickup","pickup","pickup","pickup","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","midsize","midsize","midsize","midsize","midsize","midsize","midsize","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","suv","compact","compact","midsize","midsize","midsize","midsize","midsize","midsize","midsize","suv","suv","suv","suv","midsize","midsize","midsize","midsize","midsize","suv","suv","suv","suv","suv","suv","subcompact","subcompact","subcompact","subcompact","compact","compact","compact","compact","suv","suv","suv","suv","suv","suv","midsize","midsize","midsize","midsize","midsize","midsize","midsize","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","suv","suv","pickup","pickup","pickup","pickup","pickup","pickup","pickup","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","compact","subcompact","subcompact","subcompact","subcompact","subcompact","subcompact","midsize","midsize","midsize","midsize","midsize","midsize","midsize"]}}]}
+</script>
 
 
 </head>
@@ -125,15 +164,126 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Brushing and linking</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 234 × 11
+   manufacturer model      displ  year   cyl trans drv     cty   hwy fl    class
+   &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+ 1 audi         a4           1.8  1999     4 auto… f        18    29 p     comp…
+ 2 audi         a4           1.8  1999     4 manu… f        21    29 p     comp…
+ 3 audi         a4           2    2008     4 manu… f        20    31 p     comp…
+ 4 audi         a4           2    2008     4 auto… f        21    30 p     comp…
+ 5 audi         a4           2.8  1999     6 auto… f        16    26 p     comp…
+ 6 audi         a4           2.8  1999     6 manu… f        18    26 p     comp…
+ 7 audi         a4           3.1  2008     6 auto… f        18    27 p     comp…
+ 8 audi         a4 quattro   1.8  1999     4 manu… 4        18    26 p     comp…
+ 9 audi         a4 quattro   1.8  1999     4 auto… 4        16    25 p     comp…
+10 audi         a4 quattro   2    2008     4 manu… 4        20    28 p     comp…
+# ℹ 224 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="32" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 31;"><span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>cars <span class="op">=</span> <span class="fu">transpose</span>(cars_long)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co">// First create a filter for brushing</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> filter <span class="op">=</span> Plot<span class="op">.</span><span class="fu">select</span>(<span class="st">"brush"</span>)<span class="op">;</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co">// Create the first plot (Horsepower vs MPG)</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> plot1 <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(cars<span class="op">,</span> {</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"displ"</span><span class="op">,</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"city"</span><span class="op">,</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"manufacturer"</span><span class="op">,</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> filter</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"manufacturer"</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="co">// Create the second plot (Weight vs MPG)</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> plot2 <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(cars<span class="op">,</span> {</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"hwy"</span><span class="op">,</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cty"</span><span class="op">,</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"manufacturer"</span><span class="op">,</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> filter</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"manufacturer"</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="co">// Combine plots into a panel</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">frame</span>({<span class="dt">x</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">400</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span>}<span class="op">,</span> [plot1])<span class="op">,</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">frame</span>({<span class="dt">x</span><span class="op">:</span> <span class="dv">400</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">400</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span>}<span class="op">,</span> [plot2])</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">800</span><span class="op">,</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
 
 
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImNhcnMgPSB0cmFuc3Bvc2UoY2Fyc19sb25nKVxuXG57XG4vLyBGaXJzdCBjcmVhdGUgYSBmaWx0ZXIgZm9yIGJydXNoaW5nXG5jb25zdCBmaWx0ZXIgPSBQbG90LnNlbGVjdChcImJydXNoXCIpO1xuXG4vLyBDcmVhdGUgdGhlIGZpcnN0IHBsb3QgKEhvcnNlcG93ZXIgdnMgTVBHKVxuY29uc3QgcGxvdDEgPSBQbG90LnBsb3Qoe1xuICBtYXJrczogW1xuICAgIFBsb3QuZG90KGNhcnMsIHtcbiAgICAgIHg6IFwiZGlzcGxcIixcbiAgICAgIHk6IFwiY2l0eVwiLFxuICAgICAgc3Ryb2tlOiBcIm1hbnVmYWN0dXJlclwiLFxuICAgICAgZmlsbDogZmlsdGVyXG4gICAgfSlcbiAgXSxcbiAgY29sb3I6IHtcbiAgICBsZWdlbmQ6IHRydWUsXG4gICAgbGFiZWw6IFwibWFudWZhY3R1cmVyXCJcbiAgfVxufSlcblxuLy8gQ3JlYXRlIHRoZSBzZWNvbmQgcGxvdCAoV2VpZ2h0IHZzIE1QRylcbmNvbnN0IHBsb3QyID0gUGxvdC5wbG90KHtcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdChjYXJzLCB7XG4gICAgICB4OiBcImh3eVwiLFxuICAgICAgeTogXCJjdHlcIixcbiAgICAgIHN0cm9rZTogXCJtYW51ZmFjdHVyZXJcIixcbiAgICAgIGZpbGw6IGZpbHRlclxuICAgIH0pXG4gIF0sXG4gIGNvbG9yOiB7XG4gICAgbGVnZW5kOiB0cnVlLFxuICAgIGxhYmVsOiBcIm1hbnVmYWN0dXJlclwiXG4gIH1cbn0pXG5cbi8vIENvbWJpbmUgcGxvdHMgaW50byBhIHBhbmVsXG5QbG90LnBsb3Qoe1xuICBtYXJrczogW1xuICAgIFBsb3QuZnJhbWUoe3g6IDAsIHk6IDAsIHdpZHRoOiA0MDAsIGhlaWdodDogMzAwfSwgW3Bsb3QxXSksXG4gICAgUGxvdC5mcmFtZSh7eDogNDAwLCB5OiAwLCB3aWR0aDogNDAwLCBoZWlnaHQ6IDMwMH0sIFtwbG90Ml0pXG4gIF0sXG4gIHN0eWxlOiB7XG4gICAgd2lkdGg6IDgwMCxcbiAgICBoZWlnaHQ6IDMwMFxuICB9XG59KVxufVxuIn1dfQ==
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
