@@ -10,6 +10,7 @@ format:
 #| label: setup_r
 library(tidyverse)
 library(rio)
+library(plotly)
 library(reticulate)
 library(ggsci)
 library(showtext)
@@ -143,8 +144,43 @@ const lines = vl.markLine()
         vl.y().fieldQ('quadrillion_btu').axis({title: "Energy use (Quadrillion BTU)"}),
         vl.color().fieldN('type')
     ).width(400).height(400);
-return vl.layer(lines, points).render();
+return vl.layer(lines, points).title("Energy use by source, 1973-2022").render();
 }
+```
+
+## Plotly (R)
+
+
+```{r}
+#| echo: true
+plot_ly(energy, 
+    x = ~year,
+    y = ~quadrillion_btu,
+    color = ~type,
+    text = ~type,
+    type = 'scatter',
+    mode = 'lines+markers',
+        hovertemplate = paste(
+            "<b>Year:</b> %{x}",
+            "<b>Energy use:</b> %{y:.2f}",
+            "<b>Source:</b> %{text}",
+            sep = "\n"
+        )
+    ) |> 
+    layout(
+        title = "Energy use by source, 1973-2022",
+        xaxis=list(title='Year'),
+        yaxis=list(title = "Energy (Quadrillion BTU)",
+        font = list(
+            family="Gravitas One",
+            color = "#145da0"
+        ),
+        legend = list(
+            font = list(
+                family = "Gravitas One",
+                size = 14,
+                color = "#145da0")))
+    )
 ```
 
 :::
