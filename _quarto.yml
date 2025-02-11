@@ -11,6 +11,10 @@ website:
     style: docked
     search: false
     collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: static.qmd
 
   page-footer:
     left: |
