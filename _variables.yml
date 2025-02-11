@@ -1,0 +1,69 @@
+author: Marck Vaisman
+instructor:
+  all: Abhijit Dasgupta and Marck Vaisman
+
+ta_list: >
+  \- [Yuer (Aubrey) Wang](mailto:yw1054@georgetown.edu) <br/>
+  \- [Xue (Sherry) Qin](mailto:xq68@georgetown.edu) <br/>
+  \- [Dizhou (Joe) Zhang](mailto:dz279@georgetown.edu) <br/>
+  \- [Kaiyang (Kai) Li](mailto:kl1106@georgetown.edu) <br/>
+  \- [Alex Choi](mailto:awc60@georgetown.edu) <br/>
+  \- [Jiachen (Jacky) Zhang](mailto:jz922@georgetown.edu) <br/>
+  \- [Xuening Yang](mailto:xy239@georgetown.edu) <br/>
+
+course:
+  name: Advanced Data Visualization
+  # number: "{{< meta website.title >}}"
+  number: "DSAN 5200"
+  url: <https://gu-dsan.github.io/5200-spring-2025/>
+  number_code: "`dsan5200`"
+  email: dsan5200-instructors@georgetown.edu
+  email_md: "[{{< var course.email >}}](mailto:{{< var course.email >}})"
+  team_email: dsan5200-team@georgetown.edu
+  team_email_md: "[{{< var course.team_email >}}](mailto:{{< var course.team_email >}})"
+  short_description: "Learn the art and science of data visualization drawing upon methods from statistics, graphic design, and computer science."
+  semester: Spring 2025
+  copyright_year: 2025
+  slack: <https://dsan5200spring2025.slack.com>
+  github_org: <https://github.com/gu-dsan5200/>
+  lms_course_id: 203346
+  lms_base_url: https://georgetown.instructure.com/courses/
+  lms_course_url: <{{< var course.lms_base_url >}}{{< var course.lms_course_id >}}>
+  project_dataset_proposal_form: <https://forms.gle/sc9wFLz1oFtd2qnK7>
+  google_calendar: https://docs.google.com/spreadsheets/d/1Q1JaD24zK_jKIayO_DUMbwfaop_7lmI-TpnRqUvEjjw/edit?usp=sharing
+  playlist_url: <https://open.spotify.com/playlist/1SBja753OKvg6crheBIus4?si=c128cca553c7473c&pt=9b5f887d4a6efcac57d85364b8238c79>
+
+canvas_ids:
+  lab01: 1165713
+  lab02: null
+  lab03: null
+  lab04: null
+  lab05: null
+  lab06: null
+  lab07: null
+  lab08: null
+  lab09: null
+  lab10: null
+  lab11: null
+  lab12: null
+  lab13: null
+  lab14: null
+  a01: null
+  a02: null
+  a03: null
+  a04: null
+  a05: null
+
+
+
+university:
+  name: Georgetown University
+  url: https://www.georgetown.edu
+  email_format: "`NetID@georgetown.edu`"
+  lms: Canvas
+  lms_url: https://canvas.georgetown.edu
+
+school:
+  name: The Graduate School of Arts & Sciences
+  department: Data Science and Analytics
+  url: https://analytics.georgetown.edu

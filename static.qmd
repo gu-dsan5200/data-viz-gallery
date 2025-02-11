@@ -1,0 +1,150 @@
+---
+title: Static visualizations
+format: 
+    html:
+        code-fold: true
+---
+
+```{r}
+#| include: false
+#| label: setup_r
+library(tidyverse)
+library(rio)
+library(reticulate)
+library(ggsci)
+library(showtext)
+font_add_google("Atkinson Hyperlegible")
+showtext_auto()
+reticulate::use_virtualenv('/Users/abhijit/.pyenv/versions/3.12.7/envs/dsan5200-3.12.7', required=TRUE)
+theme_set(
+    theme_bw() + 
+        theme(text = element_text(family = "Atkinson Hyperlegible", color = "#145da0", face = "bold"))
+)
+```
+
+```{python}
+#| label: setup_py
+#| include: false
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import seaborn.objects as so
+```
+## The grammar of graphics
+
+We're familiar with the [grammar of graphics](https://vita.had.co.nz/papers/layered-grammar.html) from our familiarity with `ggplot2`. These principles have also been applied to develop the semantics of several Javascript plotting libraries, including [Vega-Lite](https://vega.github.io/vega-lite/) and [Observable Plot](https://observablehq.com/plot/). Let's see how the grammar is implemented. 
+
+We'll start with some data from the US Energy Information Administration, looking at energy consumption over time of different energy sources. 
+
+```{r}
+#| cache: false
+energy <- read_csv('data/us_energy.csv')
+ojs_define(energy_long = energy)
+# head(energy)
+```
+
+
+
+```{ojs}
+energy = transpose(energy_long).map(
+    item => {
+        item.year = d3.utcFormat("%Y")(new Date(item.year, 0,1));// convert to date 
+        return item;
+    }
+)
+Inputs.table(energy,{
+    header: {
+        year: "Year",
+        type: "Source",
+        quadrillion_btu : "Energy use (Quadrillion BTU)"
+    }
+})
+```
+
+Let's start with some familiar visualizations:
+
+```{r}
+#| echo: true
+ggplot(energy, aes(x = year, y = quadrillion_btu, color = type)) +
+    geom_point() + geom_line()+
+    scale_color_npg() +
+    labs(x = "Year", y = "Energy (Quadrillion BTU)", color = "Source",
+    title="Energy use by source, 1973-2022")
+```
+
+
+```{python}
+#| eval: false
+energy = pd.read_csv('data/us_energy.csv')
+(so.Plot(energy, x = "year", y = "quadrillion_btu", color = "type")
+    .add(so.Dot())
+    .add(so.Lines())
+    )
+```
+
+::: {.panel-tabset}
+
+## Observable Plot
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    title: "Energy use by source, 1973-2022",
+    x: { label: "Year", type:'time'},
+    y: { label: "Energy (Quadrillion BTU)"},
+    color: {scheme: "Tableau10", legend: true, label: "Source", columns: 1,
+        style: {float: "right"}
+    },
+    stroke: {scheme: "Tableau10", legend: true, label: "Source", columns: 5},
+    style: {
+        backgroundColor: "white",
+        color: "#145da0",
+        fontFamily: "Atkinson Hyperlegible",
+        fontSize: "14px",
+        padding: "16px"
+    },
+    marks: [
+        Plot.dot(energy, 
+            {x: 'year',
+            y: "quadrillion_btu", 
+            fill: "type",
+            tip: true,
+            }),
+        Plot.line(energy, 
+            {x: 'year',
+            y: "quadrillion_btu", 
+            stroke: "type"}),
+        Plot.frame(), // add box around plot
+    ]
+})
+```
+
+::: {.callout-tip}
+Plot accepts many pre-specified color scales. See [here](https://observablehq.com/plot/features/scales#color-scales). Legend specs can be found [here](https://observablehq.com/plot/features/legends)
+:::
+
+## Vega-Lite
+```{ojs}
+//| echo: true
+
+{
+    const points = vl.markPoint()
+    .data(energy)
+    .encode(
+        vl.x().fieldT('year').axis({title: "Year"}),
+        vl.y().fieldQ('quadrillion_btu').axis({title: "Energy use (Quadrillion BTU)"}),
+        vl.color().fieldN('type').title("Source"),
+        vl.tooltip(['year','type','quadrillion_btu'])
+    ).width(400).height(400);
+const lines = vl.markLine()
+    .data(energy)
+    .encode(
+        vl.x().fieldT('year').axis({title: "Year"}),
+        vl.y().fieldQ('quadrillion_btu').axis({title: "Energy use (Quadrillion BTU)"}),
+        vl.color().fieldN('type')
+    ).width(400).height(400);
+return vl.layer(lines, points).render();
+}
+```
+
+:::

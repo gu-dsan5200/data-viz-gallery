@@ -1,0 +1,45 @@
+project:
+  type: website
+
+website:
+  page-navigation: false
+  title: Visualization gallery
+  search: true
+  sidebar:
+    pinned: true
+    background: "#f1de67" # Arylide Yellow
+    style: docked
+    search: false
+    collapse-level: 1
+
+  page-footer:
+    left: |
+      Content {{< fa brands creative-commons >}} {{< var course.copyright_year >}}<br>
+      {{< var instructor.all >}}<br>
+      All content licensed under a {{< fa brands creative-commons >}}
+      {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-nc >}}
+      [Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
+    right: |
+      Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
+#      [View the source at {{< fa brands github >}} GitHub]({{< var course.github >}})
+
+format:
+  html:
+    theme:
+      light: [cosmo, style/html-sta313.scss]
+      dark: [cosmo, style/html-sta313.scss, style/html-dark.scss]
+    toc: true
+    linkcolor: "#866fa3" # Glossy Grape
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+    link-external-icon: true
+    link-external-newwindow: true
+
+execute:
+  warning: false
+  message: false
+  freeze: auto
+  cache: false
+  eval: true
+  echo: false
